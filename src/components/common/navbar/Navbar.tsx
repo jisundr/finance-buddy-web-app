@@ -1,5 +1,6 @@
-import { FC } from "react";
-import { styled } from "../../../stitches.config";
+import { FC, ReactElement } from "react";
+import type * as Stitches from "@stitches/react";
+import { config, styled } from "../../../stitches.config";
 import { NavbarLogo } from "./NavbarLogo";
 
 const StyledNavbar = styled("div", {
@@ -13,11 +14,21 @@ const StyledContainer = styled("div", {
   padding: "16px",
 });
 
-export const Navbar: FC = () => {
+interface NavbarProps {
+  navbarCSS?: Stitches.CSS<typeof config>;
+  navbarContainerCSS?: Stitches.CSS<typeof config>;
+  navBarLogoComponent?: ReactElement;
+}
+
+export const Navbar: FC<NavbarProps> = ({
+  navbarCSS,
+  navbarContainerCSS,
+  navBarLogoComponent,
+}) => {
   return (
-    <StyledNavbar>
-      <StyledContainer>
-        <NavbarLogo href="#">Finance Buddy</NavbarLogo>
+    <StyledNavbar css={navbarCSS}>
+      <StyledContainer css={navbarContainerCSS}>
+        {navBarLogoComponent || <NavbarLogo href="#">Finance Buddy</NavbarLogo>}
       </StyledContainer>
     </StyledNavbar>
   );

@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { ComponentProps, FC, PropsWithChildren } from "react";
 import { styled } from "../../../stitches.config";
 
 const StyledNavbarLogo = styled("a", {
@@ -9,10 +9,8 @@ const StyledNavbarLogo = styled("a", {
   textDecoration: "none",
 });
 
-interface NavbarLogoProps extends PropsWithChildren {
-  href: string;
-}
+type NavbarLogoProps = ComponentProps<typeof StyledNavbarLogo>;
 
-export const NavbarLogo: FC<NavbarLogoProps> = ({ children, href }) => {
-  return <StyledNavbarLogo href={href}>{children}</StyledNavbarLogo>;
+export const NavbarLogo: FC<NavbarLogoProps> = ({ children, ...rest }) => {
+  return <StyledNavbarLogo {...rest}>{children}</StyledNavbarLogo>;
 };

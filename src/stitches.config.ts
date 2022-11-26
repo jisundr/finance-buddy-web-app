@@ -1,25 +1,26 @@
 import { createStitches } from "@stitches/react";
 
-export const { styled, createTheme, getCssText, globalCss } = createStitches({
-  theme: {
-    colors: {
-      white: "#ffffff",
-      neutral50: "#FAFBFF",
-      neutral100: "#F4F6FA",
-      neutral400: "#D8DAE5",
-      neutral300: "#E6E8F0",
-      neutral500: "#C1C4D6",
-      neutral600: "##8F95B2",
-      neutral700: "#696F8C",
-      neutral800: "#474D66",
-      blue200: "#D6E0FF",
-      green200: "#DCF2EA",
-      green400: "#52BD94",
-      green500: "#429777",
-      green600: "#317159",
+export const { styled, createTheme, getCssText, globalCss, config } =
+  createStitches({
+    theme: {
+      colors: {
+        white: "#ffffff",
+        neutral50: "#FAFBFF",
+        neutral100: "#F4F6FA",
+        neutral400: "#D8DAE5",
+        neutral300: "#E6E8F0",
+        neutral500: "#C1C4D6",
+        neutral600: "##8F95B2",
+        neutral700: "#696F8C",
+        neutral800: "#474D66",
+        blue200: "#D6E0FF",
+        green200: "#DCF2EA",
+        green400: "#52BD94",
+        green500: "#429777",
+        green600: "#317159",
+      },
     },
-  },
-});
+  });
 
 export const globalStyles = globalCss({
   "*": {

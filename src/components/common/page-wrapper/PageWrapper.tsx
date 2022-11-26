@@ -1,5 +1,4 @@
-import { FC, PropsWithChildren } from "react";
-import type * as Stitches from "@stitches/react";
+import { ComponentProps, FC, PropsWithChildren } from "react";
 import { styled } from "../../../stitches.config";
 
 const StyledWrapper = styled("div", {
@@ -8,9 +7,7 @@ const StyledWrapper = styled("div", {
   backgroundColor: "$neutral100",
 });
 
-interface PageWrapperProps extends PropsWithChildren {
-  css?: Stitches.CSS;
-}
+type PageWrapperProps = ComponentProps<typeof StyledWrapper>;
 
 export const PageWrapper: FC<PageWrapperProps> = ({ children, ...rest }) => {
   return <StyledWrapper {...rest}>{children}</StyledWrapper>;

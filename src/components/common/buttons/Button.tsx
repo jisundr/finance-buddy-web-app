@@ -64,9 +64,7 @@ const StyledButton = styled("button", {
 
 type ButtonColorScheme = "primary";
 
-interface ButtonProps
-  extends ComponentProps<typeof StyledButton>,
-    PropsWithChildren {
+interface ButtonProps extends ComponentProps<typeof StyledButton> {
   isFullWidth?: boolean;
   colorScheme?: ButtonColorScheme;
 }
