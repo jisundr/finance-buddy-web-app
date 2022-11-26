@@ -4,6 +4,9 @@ import { Button } from "./Button";
 export default {
   title: "Components/Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;

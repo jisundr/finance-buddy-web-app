@@ -25,10 +25,17 @@ const StyledButton = styled("button", {
     borderColor: "$neutral600",
     outline: "3px solid $blue200",
   },
+  "&:disabled": {
+    color: "$neutral500",
+    backgroundColor: "$white",
+    borderColor: "$neutral300",
+  },
 });
 
-interface ButtonProps extends PropsWithChildren {}
+interface ButtonProps extends PropsWithChildren {
+  disabled?: boolean;
+}
 
-export const Button: FC<ButtonProps> = ({ children }) => {
-  return <StyledButton>{children}</StyledButton>;
+export const Button: FC<ButtonProps> = ({ children, ...props }) => {
+  return <StyledButton {...props}>{children}</StyledButton>;
 };
