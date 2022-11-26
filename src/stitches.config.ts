@@ -12,6 +12,8 @@ export const { styled, createTheme, getCssText, globalCss } = createStitches({
       neutral700: "#696F8C",
       neutral800: "#474D66",
       blue200: "#D6E0FF",
+      green400: "#52BD94",
+      green500: "#429777",
     },
   },
 });
