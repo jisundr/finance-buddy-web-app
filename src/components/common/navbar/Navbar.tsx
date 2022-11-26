@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { styled } from "../../stitches.config";
+import { styled } from "../../../stitches.config";
 import { NavbarLogo } from "./NavbarLogo";
 
 const StyledNavbar = styled("div", {

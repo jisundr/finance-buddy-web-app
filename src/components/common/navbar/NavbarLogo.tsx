@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren } from "react";
-import { styled } from "../../stitches.config";
+import { styled } from "../../../stitches.config";
 
 const StyledNavbarLogo = styled("a", {
-  fontSize: "24px",
-  lineHeight: "32px",
+  fontSize: "20px",
+  lineHeight: "30px",
   fontWeight: "600",
   color: "$white",
   textDecoration: "none",

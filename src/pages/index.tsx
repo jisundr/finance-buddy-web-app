@@ -1,3 +1,13 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import routes from "../constants/routes";
+
 export default function Home() {
-  return <div>Hello</div>;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace(routes.login(), undefined, { shallow: true });
+  }, [router]);
+
+  return null;
 }
