@@ -1,67 +1,79 @@
 import { FC } from "react";
-import { styled } from "../../../stitches.config";
+import { Box } from "../../common/box/Box";
 import { Button } from "../../common/buttons/Button";
 import { Form } from "../../common/forms/Form";
 import { FormControl } from "../../common/forms/FormControl";
 import { FormLabel } from "../../common/forms/FormLabel";
 import { TextInput } from "../../common/forms/TextInput";
+import { Link } from "../../common/link/Link";
 import { Text } from "../../common/text/Text";
-
-const FormContainer = styled("div", {
-  backgroundColor: "$white",
-  padding: "24px",
-  border: "1px solid $neutral300",
-  borderRadius: "3px",
-  minWidth: "300px",
-});
-
-const FormHeader = styled("div", {
-  textAlign: "center",
-  marginBottom: "24px",
-});
-
-const FormContent = styled("div", {});
 
 const LoginForm: FC = () => {
   return (
-    <FormContainer>
-      <FormHeader>
-        <Text
+    <>
+      <Box
+        css={{
+          backgroundColor: "$white",
+          padding: "24px",
+          border: "1px solid $neutral300",
+          borderRadius: "3px",
+          minWidth: "300px",
+        }}
+      >
+        <Box
           css={{
-            color: "$green500",
-            fontWeight: "600",
-            fontSize: "24px",
-            lineHeight: "36px",
+            textAlign: "center",
+            marginBottom: "24px",
           }}
         >
-          Finance Buddy
-        </Text>
-        <Text
-          css={{
-            fontWeight: "500",
-            fontSize: "16px",
-            lineHeight: "24px",
-          }}
-        >
-          Login in to your account
-        </Text>
-      </FormHeader>
-      <FormContent>
+          <Text
+            css={{
+              color: "$green500",
+              fontWeight: "600",
+              fontSize: "24px",
+              lineHeight: "36px",
+            }}
+          >
+            Finance Buddy
+          </Text>
+          <Text
+            css={{
+              fontWeight: "500",
+              fontSize: "16px",
+              lineHeight: "24px",
+            }}
+          >
+            Login in to your account
+          </Text>
+        </Box>
         <Form>
           <FormControl>
-            <FormLabel htmlFor="email-input">Email Address</FormLabel>
+            <Box css={{ display: "flex" }}>
+              <FormLabel htmlFor="email-input">Email Address</FormLabel>
+            </Box>
             <TextInput id="email-input" />
           </FormControl>
           <FormControl>
-            <FormLabel htmlFor="password-input">Password</FormLabel>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <FormLabel htmlFor="password-input">Password</FormLabel>
+              <Link>Forgot Password?</Link>
+            </Box>
             <TextInput id="password-input" type="password" />
           </FormControl>
           <Button colorScheme="primary" isFullWidth type="submit">
             Login
           </Button>
         </Form>
-      </FormContent>
-    </FormContainer>
+      </Box>
+      <Box css={{ padding: "16px 8px" }}>
+        No account yet? <Link>Create Account</Link>
+      </Box>
+    </>
   );
 };
 

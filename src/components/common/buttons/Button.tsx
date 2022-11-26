@@ -11,6 +11,7 @@ const StyledButton = styled("button", {
   color: "$neutral700",
   border: "1px solid $neutral400",
   borderRadius: "3px",
+  cursor: "pointer",
   "&:hover": {
     color: "$neutral800",
     borderColor: "$neutral600",

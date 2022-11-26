@@ -14,6 +14,9 @@ export const { styled, createTheme, getCssText, globalCss, config } =
         neutral700: "#696F8C",
         neutral800: "#474D66",
         blue200: "#D6E0FF",
+        blue400: "#3366FF",
+        blue500: "#2952CC",
+        blue600: "#1F3D99",
         green200: "#DCF2EA",
         green400: "#52BD94",
         green500: "#429777",
@@ -29,6 +32,7 @@ export const globalStyles = globalCss({
   "html, body": {
     padding: 0,
     margin: 0,
+    fontSize: "14px",
     color: "$neutral800",
     fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
