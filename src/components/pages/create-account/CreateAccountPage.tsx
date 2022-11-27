@@ -4,6 +4,7 @@ import { Box } from "../../common/box/Box";
 import { Container } from "../../common/container/Container";
 
 import { Navbar } from "../../common/navbar/Navbar";
+import CreateAccountForm from "./CreateAccountForm";
 
 const GuestNavLinks = dynamic(() => import("../../common/GuestNavLinks"), {
   ssr: false,
@@ -30,7 +31,9 @@ const CreateAccountPage: FC = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-      ></Container>
+      >
+        <CreateAccountForm />
+      </Container>
     </Box>
   );
 };

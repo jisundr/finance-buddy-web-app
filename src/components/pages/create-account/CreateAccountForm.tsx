@@ -7,11 +7,11 @@ import { Form } from "../../common/forms/Form";
 import { FormControl } from "../../common/forms/FormControl";
 import { FormLabel } from "../../common/forms/FormLabel";
 import { TextInput } from "../../common/forms/TextInput";
-import { Link } from "../../common/link/Link";
 import { Text } from "../../common/text/Text";
+import { Link } from "../../common/link/Link";
 import routes from "../../../constants/routes";
 
-const LoginForm: FC = () => {
+const CreateAccountForm: FC = () => {
   return (
     <>
       <Box
@@ -46,43 +46,41 @@ const LoginForm: FC = () => {
               lineHeight: "24px",
             }}
           >
-            Login in to your account
+            Create your account
           </Text>
         </Box>
         <Form>
           <FormControl>
             <Box css={{ display: "flex" }}>
-              <FormLabel htmlFor="email-input">Email Address</FormLabel>
+              <FormLabel htmlFor="name-input">Your Name</FormLabel>
+            </Box>
+            <TextInput id="name-input" />
+          </FormControl>
+          <FormControl>
+            <Box css={{ display: "flex" }}>
+              <FormLabel htmlFor="email-input">Your Email Address</FormLabel>
             </Box>
             <TextInput id="email-input" />
           </FormControl>
           <FormControl>
-            <Box
-              css={{
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-            >
-              <FormLabel htmlFor="password-input">Password</FormLabel>
-              <NextLink href={routes.forgotPassword()} legacyBehavior passHref>
-                <Link>Forgot Password?</Link>
-              </NextLink>
+            <Box css={{ display: "flex" }}>
+              <FormLabel htmlFor="password-input">Your Password</FormLabel>
             </Box>
             <TextInput id="password-input" type="password" />
           </FormControl>
           <Button colorScheme="primary" isFullWidth type="submit">
-            Login
+            Create Account
           </Button>
         </Form>
       </Box>
       <Box css={{ padding: "16px 8px" }}>
-        No account yet?{" "}
-        <NextLink href={routes.createAccount()} passHref legacyBehavior>
-          <Link>Create Account</Link>
+        Already have an account?{" "}
+        <NextLink href={routes.login()} passHref legacyBehavior>
+          <Link>Login</Link>
         </NextLink>
       </Box>
     </>
   );
 };
 
-export default LoginForm;
+export default CreateAccountForm;
