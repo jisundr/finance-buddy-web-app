@@ -1,27 +1,14 @@
-import dynamic from "next/dynamic";
 import { FC } from "react";
-import { Box } from "../../common/box/Box";
+
 import { Container } from "../../common/container/Container";
-
 import { Navbar } from "../../common/navbar/Navbar";
+import GuestNavLinks from "../../common/GuestNavLinks";
+import PageWrapper from "../../common/PageWrapper";
 import CreateAccountForm from "./CreateAccountForm";
-
-const GuestNavLinks = dynamic(() => import("../../common/GuestNavLinks"), {
-  ssr: false,
-});
 
 const CreateAccountPage: FC = () => {
   return (
-    <Box
-      css={{
-        width: "100%",
-        minHeight: "100vh",
-        backgroundColor: "$neutral100",
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
-      }}
-    >
+    <PageWrapper>
       <Navbar navLinksComponents={<GuestNavLinks />} />
       <Container
         css={{
@@ -34,7 +21,7 @@ const CreateAccountPage: FC = () => {
       >
         <CreateAccountForm />
       </Container>
-    </Box>
+    </PageWrapper>
   );
 };
 
