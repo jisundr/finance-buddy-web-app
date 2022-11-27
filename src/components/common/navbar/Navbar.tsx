@@ -11,6 +11,7 @@ const StyledNavbar = styled("div", {
 const StyledContainer = styled("div", {
   display: "flex",
   alignItems: "center",
+  justifyContent: "space-between",
   padding: "16px",
 });
 
@@ -18,17 +19,20 @@ interface NavbarProps {
   navbarCSS?: Stitches.CSS<typeof config>;
   navbarContainerCSS?: Stitches.CSS<typeof config>;
   navBarLogoComponent?: ReactElement;
+  navLinksComponents?: ReactElement;
 }
 
 export const Navbar: FC<NavbarProps> = ({
   navbarCSS,
   navbarContainerCSS,
   navBarLogoComponent,
+  navLinksComponents,
 }) => {
   return (
     <StyledNavbar css={navbarCSS}>
       <StyledContainer css={navbarContainerCSS}>
         {navBarLogoComponent || <NavbarLogo href="#">Finance Buddy</NavbarLogo>}
+        {navLinksComponents}
       </StyledContainer>
     </StyledNavbar>
   );

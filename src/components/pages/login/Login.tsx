@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Box } from "../../common/box/Box";
 import { Container } from "../../common/container/Container";
 import { Navbar } from "../../common/navbar/Navbar";
+import GuestNavLinks from "../../common/GuestNavLinks";
 import LoginForm from "./LoginForm";
 
 const LoginPage: FC = () => {
@@ -16,7 +17,7 @@ const LoginPage: FC = () => {
         flex: 1,
       }}
     >
-      <Navbar />
+      <Navbar navLinksComponents={<GuestNavLinks />} />
       <Container
         css={{
           display: "flex",

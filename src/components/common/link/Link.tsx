@@ -20,7 +20,7 @@ const StyledLink = styled("a", {
   },
 });
 
-type LinkProps = ComponentProps<typeof StyledLink>;
+export type LinkProps = ComponentProps<typeof StyledLink>;
 
 export const Link: FC<LinkProps> = ({ children, ...rest }) => {
   return <StyledLink {...rest}>{children}</StyledLink>;

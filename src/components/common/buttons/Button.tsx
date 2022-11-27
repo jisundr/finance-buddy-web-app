@@ -1,4 +1,4 @@
-import { ComponentProps, FC, PropsWithChildren } from "react";
+import { ComponentProps, FC } from "react";
 import { styled } from "../../../stitches.config";
 
 const StyledButton = styled("button", {
@@ -59,11 +59,32 @@ const StyledButton = styled("button", {
           color: "$white",
         },
       },
+      secondary: {
+        backgroundColor: "$orange400",
+        color: "$white",
+        border: "none",
+        "&:hover": {
+          backgroundColor: "$orange500",
+          color: "$white",
+        },
+        "&:active": {
+          backgroundColor: "$orange600",
+          color: "$white",
+        },
+        "&:focus": {
+          outline: "2px solid $orange200",
+          color: "$white",
+        },
+        "&:disabled": {
+          backgroundColor: "$orange200",
+          color: "$white",
+        },
+      },
     },
   },
 });
 
-type ButtonColorScheme = "primary";
+type ButtonColorScheme = "primary" | "secondary";
 
 interface ButtonProps extends ComponentProps<typeof StyledButton> {
   isFullWidth?: boolean;

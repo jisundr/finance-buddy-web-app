@@ -21,6 +21,11 @@ export const { styled, createTheme, getCssText, globalCss, config } =
         green400: "#52BD94",
         green500: "#429777",
         green600: "#317159",
+        orange200: "#F2C8B6",
+        orange300: "#EBAC91",
+        orange400: "#DE7548",
+        orange500: "#B25E3A",
+        orange600: "#85462B",
       },
     },
   });
