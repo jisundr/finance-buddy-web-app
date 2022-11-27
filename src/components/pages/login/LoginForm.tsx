@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
 import NextLink from "next/link";
 
 import { Box } from "../../common/box/Box";
@@ -12,6 +14,18 @@ import { Text } from "../../common/text/Text";
 import routes from "../../../constants/routes";
 
 const LoginForm: FC = () => {
+  const router = useRouter();
+  const { handleSubmit } = useForm({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const onLoginSubmit = () => {
+    router.push(routes.dashboard());
+  };
+
   return (
     <>
       <Box
@@ -49,7 +63,7 @@ const LoginForm: FC = () => {
             Login in to your account
           </Text>
         </Box>
-        <Form>
+        <Form onSubmit={handleSubmit(onLoginSubmit)}>
           <FormControl>
             <Box css={{ display: "flex" }}>
               <FormLabel htmlFor="email-input">Email Address</FormLabel>
