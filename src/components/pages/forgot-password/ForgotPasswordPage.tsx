@@ -4,6 +4,7 @@ import { Box } from "../../common/box/Box";
 import { Container } from "../../common/container/Container";
 
 import { Navbar } from "../../common/navbar/Navbar";
+import ForgotPasswordForm from "./ForgotPasswordForm";
 
 const GuestNavLinks = dynamic(() => import("../../common/GuestNavLinks"), {
   ssr: false,
@@ -30,7 +31,9 @@ const ForgotPasswordPage: FC = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-      ></Container>
+      >
+        <ForgotPasswordForm />
+      </Container>
     </Box>
   );
 };
