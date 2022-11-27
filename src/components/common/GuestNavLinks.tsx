@@ -1,11 +1,12 @@
+import Link from "next/link";
 import { FC } from "react";
+
+import routes from "../../constants/routes";
 import { Box } from "./box/Box";
 import { Button } from "./buttons/Button";
 import { NavLinkItem } from "./navbar/NavLinkItem";
 
-interface NavLinksProps {}
-
-const GuestNavLinks: FC<NavLinksProps> = () => {
+const GuestNavLinks: FC = () => {
   return (
     <Box
       css={{
@@ -14,9 +15,18 @@ const GuestNavLinks: FC<NavLinksProps> = () => {
         alignItems: "center",
       }}
     >
-      <NavLinkItem>Login</NavLinkItem>
+      <Link
+        href={routes.login()}
+        passHref
+        legacyBehavior
+        style={{ textDecoration: "none" }}
+      >
+        <NavLinkItem>Login</NavLinkItem>
+      </Link>
       <Box css={{ marginRight: "16px" }} />
-      <Button colorScheme="secondary">Create Account</Button>
+      <Link href={routes.register()} passHref>
+        <Button colorScheme="secondary">Create Account</Button>
+      </Link>
     </Box>
   );
 };

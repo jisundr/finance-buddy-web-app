@@ -1,4 +1,5 @@
 import { FC } from "react";
+import NextLink from "next/link";
 import { Box } from "../../common/box/Box";
 import { Button } from "../../common/buttons/Button";
 import { Form } from "../../common/forms/Form";
@@ -7,6 +8,7 @@ import { FormLabel } from "../../common/forms/FormLabel";
 import { TextInput } from "../../common/forms/TextInput";
 import { Link } from "../../common/link/Link";
 import { Text } from "../../common/text/Text";
+import routes from "../../../constants/routes";
 
 const LoginForm: FC = () => {
   return (
@@ -61,7 +63,9 @@ const LoginForm: FC = () => {
               }}
             >
               <FormLabel htmlFor="password-input">Password</FormLabel>
-              <Link>Forgot Password?</Link>
+              <NextLink href={routes.forgotPassword()} legacyBehavior passHref>
+                <Link>Forgot Password?</Link>
+              </NextLink>
             </Box>
             <TextInput id="password-input" type="password" />
           </FormControl>
@@ -71,7 +75,10 @@ const LoginForm: FC = () => {
         </Form>
       </Box>
       <Box css={{ padding: "16px 8px" }}>
-        No account yet? <Link>Create Account</Link>
+        No account yet?{" "}
+        <NextLink href={routes.register()} passHref legacyBehavior>
+          <Link>Create Account</Link>
+        </NextLink>
       </Box>
     </>
   );

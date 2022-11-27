@@ -1,7 +1,7 @@
 import { ComponentProps, FC } from "react";
 import { styled } from "../../../stitches.config";
 
-const StyledLink = styled("a", {
+export const Link = styled("a", {
   fontSize: "14px",
   lineHeight: "21px",
   color: "$blue400",
@@ -19,9 +19,3 @@ const StyledLink = styled("a", {
     outline: "2px solid $blue200",
   },
 });
-
-export type LinkProps = ComponentProps<typeof StyledLink>;
-
-export const Link: FC<LinkProps> = ({ children, ...rest }) => {
-  return <StyledLink {...rest}>{children}</StyledLink>;
-};
