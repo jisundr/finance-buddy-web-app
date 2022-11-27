@@ -76,7 +76,7 @@ const LoginForm: FC = () => {
       </Box>
       <Box css={{ padding: "16px 8px" }}>
         No account yet?{" "}
-        <NextLink href={routes.register()} passHref legacyBehavior>
+        <NextLink href={routes.createAccount()} passHref legacyBehavior>
           <Link>Create Account</Link>
         </NextLink>
       </Box>

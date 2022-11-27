@@ -24,7 +24,7 @@ const GuestNavLinks: FC = () => {
         <NavLinkItem>Login</NavLinkItem>
       </Link>
       <Box css={{ marginRight: "16px" }} />
-      <Link href={routes.register()} passHref>
+      <Link href={routes.createAccount()} passHref>
         <Button colorScheme="secondary">Create Account</Button>
       </Link>
     </Box>

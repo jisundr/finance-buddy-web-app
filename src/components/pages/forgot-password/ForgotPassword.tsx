@@ -9,7 +9,7 @@ const GuestNavLinks = dynamic(() => import("../../common/GuestNavLinks"), {
   ssr: false,
 });
 
-const PasswordResetPage: FC = () => {
+const ForgotPasswordPage: FC = () => {
   return (
     <Box
       css={{
@@ -35,4 +35,4 @@ const PasswordResetPage: FC = () => {
   );
 };
 
-export default PasswordResetPage;
+export default ForgotPasswordPage;
