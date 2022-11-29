@@ -37,7 +37,7 @@ const ForgotPasswordForm: FC = () => {
               lineHeight: "36px",
             }}
           >
-            Finance Buddy
+            {process.env.NEXT_PUBLIC_LOGO_TITLE}
           </Text>
           <Text
             css={{
@@ -75,7 +75,7 @@ const ForgotPasswordForm: FC = () => {
       </Box>
       <Box css={{ padding: "16px 8px" }}>
         No account yet?{" "}
-        <NextLink href={routes.createAccount()} passHref legacyBehavior>
+        <NextLink href={routes.CREATE_ACCOUNT} passHref legacyBehavior>
           <Link>Create Account</Link>
         </NextLink>
       </Box>

@@ -37,7 +37,7 @@ const CreateAccountForm: FC = () => {
               lineHeight: "36px",
             }}
           >
-            Finance Buddy
+            {process.env.NEXT_PUBLIC_LOGO_TITLE}
           </Text>
           <Text
             css={{
@@ -75,7 +75,7 @@ const CreateAccountForm: FC = () => {
       </Box>
       <Box css={{ padding: "16px 8px" }}>
         Already have an account?{" "}
-        <NextLink href={routes.login()} passHref legacyBehavior>
+        <NextLink href={routes.LOGIN} passHref legacyBehavior>
           <Link>Login</Link>
         </NextLink>
       </Box>

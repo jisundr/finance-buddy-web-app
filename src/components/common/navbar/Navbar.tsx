@@ -2,6 +2,7 @@ import { FC, ReactElement } from "react";
 import type * as Stitches from "@stitches/react";
 import { config, styled } from "../../../stitches.config";
 import { NavbarLogo } from "./NavbarLogo";
+import routes from "../../../constants/routes";
 
 const StyledNavbar = styled("div", {
   backgroundColor: "$green500",
@@ -31,7 +32,11 @@ export const Navbar: FC<NavbarProps> = ({
   return (
     <StyledNavbar css={navbarCSS}>
       <StyledContainer css={navbarContainerCSS}>
-        {navBarLogoComponent || <NavbarLogo href="#">Finance Buddy</NavbarLogo>}
+        {navBarLogoComponent || (
+          <NavbarLogo href={routes.HOME}>
+            {process.env.NEXT_PUBLIC_LOGO_TITLE}
+          </NavbarLogo>
+        )}
         {navLinksComponents}
       </StyledContainer>
     </StyledNavbar>

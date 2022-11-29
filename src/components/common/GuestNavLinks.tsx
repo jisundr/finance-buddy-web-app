@@ -16,7 +16,7 @@ const GuestNavLinks: FC = () => {
       }}
     >
       <Link
-        href={routes.login()}
+        href={routes.LOGIN}
         passHref
         legacyBehavior
         style={{ textDecoration: "none" }}
@@ -24,7 +24,7 @@ const GuestNavLinks: FC = () => {
         <NavLinkItem>Login</NavLinkItem>
       </Link>
       <Box css={{ marginRight: "16px" }} />
-      <Link href={routes.createAccount()} passHref>
+      <Link href={routes.CREATE_ACCOUNT} passHref>
         <Button colorScheme="secondary">Create Account</Button>
       </Link>
     </Box>
