@@ -1,6 +1,6 @@
 import { createStitches } from "@stitches/react";
 
-export const { styled, createTheme, getCssText, globalCss, config } =
+export const { styled, createTheme, getCssText, globalCss, config, keyframes } =
   createStitches({
     theme: {
       colors: {
@@ -18,6 +18,7 @@ export const { styled, createTheme, getCssText, globalCss, config } =
         blue500: "#2952CC",
         blue600: "#1F3D99",
         green200: "#DCF2EA",
+        green300: "#A3E6CD",
         green400: "#52BD94",
         green500: "#429777",
         green600: "#317159",
@@ -41,5 +42,49 @@ export const globalStyles = globalCss({
     color: "$neutral800",
     fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
+  },
+});
+
+export const slideUpandFade = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateY(2px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
+export const slideRightAndFade = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateX(-2px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateX(0)",
+  },
+});
+
+export const slideDownAndFade = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateY(-2px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
+export const slideLeftAndFade = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateX(2px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateX(0)",
   },
 });

@@ -78,9 +78,11 @@ const LoginForm: FC = () => {
               }}
             >
               <FormLabel htmlFor="password-input">Password</FormLabel>
-              <NextLink href={routes.FORGOT_PASSWORD} legacyBehavior passHref>
-                <Link>Forgot Password?</Link>
-              </NextLink>
+              <Box>
+                <NextLink href={routes.FORGOT_PASSWORD} legacyBehavior passHref>
+                  <Link>Forgot Password?</Link>
+                </NextLink>
+              </Box>
             </Box>
             <TextInput id="password-input" type="password" />
           </FormControl>
