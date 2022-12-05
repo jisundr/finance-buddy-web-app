@@ -5,7 +5,7 @@ export default function CreateAccount() {
   return (
     <>
       <Head>
-        <title>Create Account | Finance Buddy</title>
+        <title>Create Account | {process.env.NEXT_PUBLIC_LOGO_TITLE}</title>
       </Head>
       <CreateAccountPage />;
     </>

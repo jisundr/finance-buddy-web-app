@@ -5,7 +5,7 @@ export default function ForgotPassword() {
   return (
     <>
       <Head>
-        <title>Forgot Password | Finance Buddy</title>
+        <title>Forgot Password | {process.env.NEXT_PUBLIC_LOGO_TITLE}</title>
       </Head>
       <ForgotPasswordPage />;
     </>

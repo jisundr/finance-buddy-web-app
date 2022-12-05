@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>Login | Finance Buddy</title>
+        <title>Login | {process.env.NEXT_PUBLIC_LOGO_TITLE}</title>
       </Head>
       <LoginPage />;
     </>

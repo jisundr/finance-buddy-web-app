@@ -5,7 +5,7 @@ export default function Dashboard() {
   return (
     <>
       <Head>
-        <title>Dashboard | Finance Buddy</title>
+        <title>Dashboard | {process.env.NEXT_PUBLIC_LOGO_TITLE}</title>
       </Head>
       <DashboardPage />
     </>
